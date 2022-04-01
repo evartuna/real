@@ -36,4 +36,4 @@ jobs:
            rm .gitignore
            git add _site 
            git commit -m "up" 
-           git push origin `git subtree split --prefix _site main`:gh-pages –-force
+           git push origin `git subtree split --prefix _site main`:gh-pages ––force
