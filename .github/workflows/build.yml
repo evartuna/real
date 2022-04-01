@@ -31,10 +31,10 @@ jobs:
           git config --global user.email "kwang1406@gmail.com" 
           git config --global user.name "evartuna"
            
+           
     - name: git
-      run: |
-          rm .gitignore  
-          git add _site  
-          git commit -m "build"
-          git push origin `git subtree split --prefix _site main`:gh-pages --force
+      run: rm .gitignore && git add _site && git commit -m "build"
+
+    - name: push
+      run: git push origin `git subtree split --prefix _site main`:gh-pages --force
 
